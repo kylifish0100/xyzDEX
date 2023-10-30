@@ -1,0 +1,13 @@
+[package]
+name = "xyzDEX"
+version = "1.0.0"
+
+[[target.starknet-contract]]
+sierra = true
+casm = true
+casm-add-pythonic-hints = true
+allowed-libfuncs-list.name = "all"
+
+[dependencies]
+starknet = "2.2.0"
+snforge_std = { git = "https://github.com/foundry-rs/starknet-foundry.git", tag = "v0.8.3" }
