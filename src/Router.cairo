@@ -506,7 +506,7 @@ mod Router {
             let (reserveIn, reserveOut) = _get_reserves(factory, *path[current_index - 1], *path[current_index]);
             amounts
                 .append(
-                    _get_amount_in(*amounts[path.len() - current_index], reserveIn, reserveOut)
+                    _get_amount_in(*amounts[amounts.len() - 1], reserveIn, reserveOut)
                 );
             current_index -= 1;
         };
